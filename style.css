@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:300,600');
 
 :root {
-  --background: rgba(0, 0, 0, .9);
+  --background: rgba(255, 255, 255, .9);
 }
 
 *, *::before, *::after {
@@ -10,27 +10,22 @@
 
 body {
 	margin: 0;
-	background: black;
+	background: white;
+  min-height: 100vh;
 	font-family: 'Work Sans', sans-serif;
 	font-weight: 400;
   text-align: center;
 }
 
-.box {
-  width: 100%;
-  max-width: 100px;
-  margin-top: 150px;
-  height: 400px;
+.maintitle {
+  padding-top: 200px;
 }
 
-.content {
-  height: 200vh;
-  background-color: white;
-  background-blend-mode: multiply;
-  background-size: cover;
-  display: grid;
-  place-items: center;
+h1 {
+  text-align: center;
 }
+
+
 
 /* navigation styles start here */
 
@@ -43,7 +38,8 @@ header {
   text-transform: uppercase;
   font-family: Segoe UI;
   font-stretch: condensed;
-  color: white;
+  color: black;
+  padding: 2em;
 }
 
 .nav-toggle {
@@ -64,7 +60,7 @@ header {
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {
   display: block;
-  background: white;
+  background: black;
   height: 2px;
   width: 2em;
   border-radius: 2px;
@@ -95,6 +91,7 @@ nav {
   transform: scale(1, 0);
   transform-origin: top;
   transition: transform 400ms ease-in-out;
+  background-color: white;
 }
 
 nav ul {
@@ -109,7 +106,7 @@ nav li {
 }
 
 nav a {
-  color: white;
+  color: black;
   text-decoration: none;
   font-size: 1.2rem;
   text-transform: uppercase;
@@ -169,7 +166,7 @@ nav a:hover {
       content: '';
       display: block;
       height: 5px;
-      background: white;
+      background: black;
       position: absolute;
       top: -.75em;
       left: 0;

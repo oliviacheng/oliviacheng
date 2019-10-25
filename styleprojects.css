@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:300,600');
 
 :root {
-  --background: rgba(0, 0, 0, .9);
+  --background: rgba(255, 255, 255, .9);
 }
 
 *, *::before, *::after {
@@ -10,27 +10,14 @@
 
 body {
 	margin: 0;
-	background: black;
+	background: white;
 	font-family: 'Work Sans', sans-serif;
 	font-weight: 400;
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.box {
-  width: 100%;
-  max-width: 100px;
-  margin-top: 150px;
-  height: 400px;
-}
-
-.content {
-  height: 200vh;
-  background-color: white;
-  background-blend-mode: multiply;
-  background-size: cover;
-  display: grid;
-  place-items: center;
-}
 
 /* navigation styles start here */
 
@@ -43,7 +30,11 @@ header {
   text-transform: uppercase;
   font-family: Segoe UI;
   font-stretch: condensed;
-  color: white;
+  color: black;
+}
+
+.projectsbutton{
+    color: #a6a6a6;
 }
 
 .nav-toggle {
@@ -64,7 +55,7 @@ header {
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {
   display: block;
-  background: white;
+  background: black;
   height: 2px;
   width: 2em;
   border-radius: 2px;
@@ -85,10 +76,6 @@ header {
   top: 7px;
 }
 
-.projectsbutton {
-  color: #a6a6a6;
-}
-
 nav {
   position: absolute;
   text-align: left;
@@ -99,6 +86,7 @@ nav {
   transform: scale(1, 0);
   transform-origin: top;
   transition: transform 400ms ease-in-out;
+  background-color: white;
 }
 
 nav ul {
@@ -113,7 +101,7 @@ nav li {
 }
 
 nav a {
-  color: white;
+  color: black;
   text-decoration: none;
   font-size: 1.2rem;
   text-transform: uppercase;
@@ -173,7 +161,7 @@ nav a:hover {
       content: '';
       display: block;
       height: 5px;
-      background: white;
+      background: black;
       position: absolute;
       top: -.75em;
       left: 0;
@@ -185,4 +173,75 @@ nav a:hover {
     nav a:hover::before {
       transform: scale(1,1);
     }
+}
+
+
+
+/* Portfolio */
+
+.main-content {
+  padding: 12%;
+  flex: 1 1 80%;
+  min-height: 100vh;
+}
+
+.portfolio {
+  display: grid;
+  height: 100%;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 20px;
+}
+
+.portfolio-item {
+  background-color: #afad;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  background-size: cover;
+  background-position: top left;
+  transition: all ease-in-out 800ms;
+  position: relative;
+  z-index: 10;
+  }
+
+.portfolio-item:hover {
+  color: white;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.85);
+}
+
+.portfolio-item.first {
+  grid-row: span 2;
+  grid-column: span 3;
+}
+
+.portfolio-item.large {
+  grid-row: span 4;
+  grid-column: span 3;
+}
+
+.portfolio-item.large.medley {
+  background-image: url(https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?ixlib=rb-1.2.1&w=1000&q=80);
+  background-size: cover;
+  background-position: center;
+  color: white;
+  transition: all ease-in-out 300ms;
+}
+.portfolio-item.large.medley::before {
+  content: '';
+  display: block;
+  background: #d6d6d6;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: all ease-in-out 300ms;
+  z-index: -1;
+}
+
+.portfolio-item.large.medley:hover::before {
+  opacity: 0.2;
 }
