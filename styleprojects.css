@@ -18,7 +18,10 @@ body {
   flex-wrap: wrap;
 }
 
-
+a {
+  color: inherit;
+  text-decoration: none;
+}
 /* navigation styles start here */
 
 header {
@@ -180,21 +183,25 @@ nav a:hover {
 /* Portfolio */
 
 .main-content {
-  padding: 12%;
-  flex: 1 1 80%;
+  padding-top: 10%;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 2%;
+  flex: 100%;
   min-height: 100vh;
 }
 
 .portfolio {
   display: grid;
   height: 100%;
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(auto-fill, 1fr);
   grid-template-columns: repeat(6, 1fr);
   grid-gap: 20px;
+
 }
 
 .portfolio-item {
-  background-color: #afad;
+  background-color: #EAEAEA;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -211,27 +218,63 @@ nav a:hover {
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.85);
 }
 
-.portfolio-item.first {
-  grid-row: span 2;
-  grid-column: span 3;
-}
-
-.portfolio-item.large {
+.portfolio-item.accidont {
   grid-row: span 4;
   grid-column: span 3;
+  background-image: url('./accidont.png');
+  background-size: cover;
+  background-position: top;
+  color: white;
+  font-weight: 600;
+  font-stretch: extra-expanded;
+  font-size: 30px;
+  transition: all ease-in-out 300ms;
 }
 
-.portfolio-item.large.medley {
-  background-image: url(https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?ixlib=rb-1.2.1&w=1000&q=80);
+.portfolio-item.tactile {
+  grid-row: span 4;
+  grid-column: span 3;
+  background-image: url('./tactile.jpg');
   background-size: cover;
   background-position: center;
   color: white;
+  font-weight: 600;
+  font-stretch: extra-expanded;
+  font-size: 30px;
   transition: all ease-in-out 300ms;
 }
-.portfolio-item.large.medley::before {
+
+.portfolio-item.ac {
+  grid-row: span 4;
+  grid-column: span 3;
+  background-image: url('./loading.gif');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  font-weight: 600;
+  font-stretch: extra-expanded;
+  font-size: 30px;
+  transition: all ease-in-out 300ms;
+}
+
+.portfolio-item.letseat {
+  grid-row: span 4;
+  grid-column: span 3;
+  background-image: url('./letseat.png');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  font-weight: 600;
+  font-stretch: extra-expanded;
+  font-size: 30px;
+  transition: all ease-in-out 300ms;
+}
+
+.portfolio-item.letseat::before
+.portfolio-item.accidont::before {
   content: '';
   display: block;
-  background: #d6d6d6;
+  background: #F5EAFF;
   opacity: 0.5;
   position: absolute;
   top: 0;
@@ -242,6 +285,7 @@ nav a:hover {
   z-index: -1;
 }
 
-.portfolio-item.large.medley:hover::before {
+.portfolio-item.letseat:hover::before
+.portfolio-item.accidont:hover::before {
   opacity: 0.2;
 }

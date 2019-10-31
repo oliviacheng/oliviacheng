@@ -25,6 +25,11 @@ body {
   place-items: center;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 /* navigation styles start here */
 
 header {
@@ -178,23 +183,40 @@ nav a:hover {
     nav a:hover::before {
       transform: scale(1,1);
     }
+
+
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  padding-top: 5%;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .myphoto {
-  width: 100%;
-  max-width: 450px;
-  height: 600px;
-  margin-top: 80px;
+  display: block;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2%;
+
 }
 
-h3 {
-  color: white;
+h1 {
+  color: black;
 }
 
  p {
   color: black;
   background-color: white;
   padding: 5px 20px;
-  width: 800px;
+  width: 98%;
   margin: 0 auto;
 }
